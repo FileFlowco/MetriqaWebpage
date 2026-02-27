@@ -1,5 +1,3 @@
-/* FILE: css/style.css */
-
 /* =========================
    Metriqa – Apple-style Dark Theme
    ========================= */
@@ -20,7 +18,7 @@
   
   /* -------------------------
      Header
-     ------------------------- */
+  ------------------------- */
   header {
     padding: 2rem 4rem;
     display: flex;
@@ -47,7 +45,7 @@
   
   /* -------------------------
      Sections
-     ------------------------- */
+  ------------------------- */
   section {
     padding: 4rem 4rem;
   }
@@ -61,7 +59,7 @@
   
   /* -------------------------
      Hero
-     ------------------------- */
+  ------------------------- */
   .hero {
     padding: 5rem 4rem;
     display: grid;
@@ -85,18 +83,66 @@
   
   /* -------------------------
      Cards / Mock
-     ------------------------- */
-  .mock {
-    background: rgba(255,255,255,0.06);
-    border-radius: 22px;
-    padding: 2rem;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
-    min-height: 320px;
-  }
+  ------------------------- */
+  /* -------------------------
+   App Preview Mock (FIXED)
+------------------------- */
+
+.mock {
+  background: rgba(255,255,255,0.05);
+  border-radius: 22px;
+  padding: 2rem;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mock-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 1.25rem;
+}
+
+/* This is the KEY FIX */
+.mock-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 320px;
+
+  border-radius: 18px;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(42,184,166,0.22),
+    rgba(42,184,166,0.08),
+    rgba(0,0,0,0)
+  );
+
+  overflow: hidden;
+}
+
+/* Image now behaves like a hero mock */
+.mock-image img {
+  height: 120%;
+  width: auto;
+  max-width: none;
+
+  object-fit: contain;
+
+  transform: translateY(10px) scale(1.15);
+
+  filter:
+    drop-shadow(0 35px 80px rgba(0,0,0,0.7))
+    drop-shadow(0 0 40px rgba(42,184,166,0.18));
+}
   
   /* -------------------------
      Features / Legal Cards
-     ------------------------- */
+  ------------------------- */
   .features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -132,7 +178,7 @@
   
   /* -------------------------
      Text Content Pages
-     ------------------------- */
+  ------------------------- */
   section h3 {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
@@ -147,7 +193,7 @@
   
   /* -------------------------
      Footer
-     ------------------------- */
+  ------------------------- */
   footer {
     padding: 2.5rem 4rem;
     background: #080c10;
@@ -160,7 +206,7 @@
   
   /* -------------------------
      Responsive
-     ------------------------- */
+  ------------------------- */
   @media (max-width: 900px) {
     header,
     section,
@@ -181,4 +227,3 @@
       margin-left: 1.2rem;
     }
   }
-  
